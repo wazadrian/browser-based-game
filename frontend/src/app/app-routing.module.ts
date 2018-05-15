@@ -4,12 +4,11 @@ import { CommonModule } from '@angular/common';
 import { HomeComponent } from './pages/home/home.component';
 import { GameComponent } from './pages/game/game.component';
 import { AuthGuardService } from './services/auth-guard.service';
-import { ArenaComponent } from './game/arena/arena.component';
-import { CraftingComponent } from './game/crafting/crafting.component';
-import { GatheringComponent } from './game/gathering/gathering.component';
-import { InventoryComponent } from './game/inventory/inventory.component';
-import { MapComponent } from './game/map/map.component';
-
+import { ArenaComponent } from './pages/game/arena/arena.component';
+import { CraftingComponent } from './pages/game/crafting/crafting.component';
+import { GatheringComponent } from './pages/game/gathering/gathering.component';
+import { InventoryComponent } from './pages/game/inventory/inventory.component';
+import { MapComponent } from './pages/game/map/map.component';
 const routes: Routes = [
   {
     path: '',

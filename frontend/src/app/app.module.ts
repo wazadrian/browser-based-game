@@ -21,11 +21,13 @@ import { TokenInterceptor } from './interceptors/token.interceptor';
 import { ApiInterceptor } from './interceptors/api.interceptor';
 import { StatusBarComponent } from './components/status-bar/status-bar.component';
 import { GameMenuComponent } from './components/game-menu/game-menu.component';
-import { InventoryComponent } from './game/inventory/inventory.component';
-import { CraftingComponent } from './game/crafting/crafting.component';
-import { GatheringComponent } from './game/gathering/gathering.component';
-import { MapComponent } from './game/map/map.component';
-import { ArenaComponent } from './game/arena/arena.component';
+import { InventoryComponent } from './pages/game/inventory/inventory.component';
+import { CraftingComponent } from './pages/game/crafting/crafting.component';
+import { GatheringComponent } from './pages/game/gathering/gathering.component';
+import { MapComponent } from './pages/game/map/map.component';
+import { ArenaComponent } from './pages/game/arena/arena.component';
+import { ItemListComponent } from './pages/game/inventory/item-list/item-list.component';
+import { ItemElementComponent } from './pages/game/inventory/item-list/item-element/item-element.component';
 
 @NgModule({
   declarations: [
@@ -42,7 +44,9 @@ import { ArenaComponent } from './game/arena/arena.component';
     CraftingComponent,
     GatheringComponent,
     MapComponent,
-    ArenaComponent
+    ArenaComponent,
+    ItemListComponent,
+    ItemElementComponent
   ],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule, FormsModule],
   providers: [
