@@ -19,6 +19,13 @@ import { AuthGuardService } from './services/auth-guard.service';
 import { HTTP_INTERCEPTORS } from '@angular/common/http';
 import { TokenInterceptor } from './interceptors/token.interceptor';
 import { ApiInterceptor } from './interceptors/api.interceptor';
+import { StatusBarComponent } from './components/status-bar/status-bar.component';
+import { GameMenuComponent } from './components/game-menu/game-menu.component';
+import { InventoryComponent } from './game/inventory/inventory.component';
+import { CraftingComponent } from './game/crafting/crafting.component';
+import { GatheringComponent } from './game/gathering/gathering.component';
+import { MapComponent } from './game/map/map.component';
+import { ArenaComponent } from './game/arena/arena.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +35,14 @@ import { ApiInterceptor } from './interceptors/api.interceptor';
     HeaderComponent,
     FooterComponent,
     HomeComponent,
-    GameComponent
+    GameComponent,
+    StatusBarComponent,
+    GameMenuComponent,
+    InventoryComponent,
+    CraftingComponent,
+    GatheringComponent,
+    MapComponent,
+    ArenaComponent
   ],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule, FormsModule],
   providers: [
