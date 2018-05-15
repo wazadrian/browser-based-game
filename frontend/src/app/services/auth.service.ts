@@ -15,28 +15,29 @@ export class AuthService {
 
   public isAuthenticated(): boolean {
     const token = this.getToken();
-    return tokenNotExpired(null, token);
+    if (token === null) {
+      return false;
+    }
+    return true;
+    // return tokenNotExpired(null, token);
   }
 
   signUpUser(email: string, password: string) {
-    const user: UserModel = new UserModel(
-      email,
-      password
-    );
+    const user: UserModel = new UserModel(email, password);
     return this._http.post(this.url + '/Register', user);
   }
   signInUser(email: string, password: string) {
-    const user: UserModel = new UserModel(
-      email,
-      password
-    );
-    return this._http.post(this.url, user).subscribe(
+    const user: UserModel = new UserModel(email, password);
+    localStorage.setItem('token', 'abc');
+    this.router.navigate(['/game']);
+    return 'ABC';
+    /*return this._http.post(this.url, user).subscribe(
       (token: string) => {
         this.router.navigate(['/']);
         localStorage.setItem('token', token['token']);
       },
       error => console.log(error)
-    );
+    );*/
   }
 
   logout() {
